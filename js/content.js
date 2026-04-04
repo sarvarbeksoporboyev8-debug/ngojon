@@ -92,7 +92,7 @@
           + '<span class="tag">' + e.dateLabel + (e.status === 'upcoming' ? ' · Rejalashtirilgan' : ' · Bo\'lib o\'tdi') + '</span>'
           + '<h3>' + e.title + '</h3>'
           + '<p>' + e.description + '</p>'
-          + (e.location ? '<p style="font-size:13px;color:rgba(180,220,255,.5);margin-top:6px">📍 ' + e.location + '</p>' : '')
+          + (e.location ? '<p style="font-size:13px;color:rgba(180,220,255,.5);margin-top:6px"><ph-map-pin weight="fill" style="font-size:13px"></ph-map-pin> ' + e.location + '</p>' : '')
           + (e.deadline ? '<p style="font-size:13px;color:#00b4d8;margin-top:4px">Ariza muddati: ' + e.deadlineLabel + '</p>' : '')
           + '</article>';
       }).join('');

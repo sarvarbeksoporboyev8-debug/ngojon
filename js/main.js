@@ -1,4 +1,9 @@
 (function () {
+  /* ── Load Phosphor Icons 2.1 ─────────────────────────────── */
+  var _ph = document.createElement('script');
+  _ph.src = 'https://unpkg.com/@phosphor-icons/web@2.1.1';
+  document.head.appendChild(_ph);
+
   var i18nKey = "ngo_lang_v1";
   var i18nDict = {
     uz: {
