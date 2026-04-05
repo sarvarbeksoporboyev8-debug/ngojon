@@ -17,7 +17,7 @@
       '<header class="site-header">' +
         '<div class="container nav">' +
           '<a class="brand" href="../index.html"><span class="brand-dot">NGO</span>ngo.uz</a>' +
-          '<span class="cab-panel-label">Boshqaruv Kabineti</span>' +
+          '<span class="cab-panel-label">A\'zo Kabineti</span>' +
           '<div class="cab-header-right">' +
             '<a class="cab-site-link" href="../index.html">Asosiy sayt</a>' +
             '<a class="contact-btn" href="cabinet-login.html">Chiqish</a>' +
@@ -44,11 +44,11 @@
 
     var titleText = heading
       ? heading.textContent.replace(/\s+/g, ' ').trim()
-      : 'Kabinet boshqaruvi';
+      : "A'zo kabineti";
 
     var subText = subtitle
       ? subtitle.textContent.replace(/\s+/g, ' ').trim()
-      : "NNT a'zolari va tashkilotlar uchun yagona boshqaruv muhiti.";
+      : "O'zNNTMA a'zosi bo'lgan NNTlar uchun shaxsiy kabinet.";
 
     return { title: titleText, subtitle: subText };
   }
