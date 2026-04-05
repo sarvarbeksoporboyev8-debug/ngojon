@@ -884,3 +884,121 @@ button {
     transition: none !important;
   }
 }
+
+/* Admin-style cabinet shell */
+.app {
+  display: block;
+  min-height: 100vh;
+}
+
+.main {
+  width: min(1240px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 36px;
+  display: block;
+}
+
+.cab-layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.cab-main-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cab-nav-panel {
+  position: sticky;
+  top: 20px;
+  padding: 16px;
+}
+
+.cab-nav-panel h3 {
+  margin: 0 0 12px;
+  color: var(--neutral-500);
+  font-size: 15px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.cab-menu {
+  display: grid;
+  gap: 8px;
+}
+
+.cab-menu-group {
+  margin: 8px 2px 0;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--neutral-400);
+}
+
+.cab-menu a {
+  display: block;
+  border: 1px solid var(--neutral-200);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--neutral-700);
+  font-size: 13.5px;
+  font-weight: 600;
+  position: relative;
+  transition: all .16s ease;
+}
+
+.cab-menu a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  bottom: 7px;
+  width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: transparent;
+}
+
+.cab-menu a:hover {
+  border-color: #9ac5d8;
+  color: #13455f;
+  box-shadow: 0 8px 18px rgba(8, 30, 52, .1);
+  transform: translateY(-1px);
+}
+
+.cab-menu a.active {
+  border-color: #7fb0c7;
+  color: #123e58;
+  background: linear-gradient(120deg, rgba(0, 180, 216, .18), rgba(0, 180, 216, .06));
+  box-shadow: 0 10px 20px rgba(8, 30, 52, .12);
+}
+
+.cab-menu a.active::before {
+  background: linear-gradient(180deg, #0d6e8e, #00b4d8);
+}
+
+.topbar,
+.sidebar {
+  display: none !important;
+}
+
+@media (max-width: 1060px) {
+  .cab-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cab-nav-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .main {
+    width: calc(100% - 20px);
+  }
+}
